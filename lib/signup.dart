@@ -181,6 +181,7 @@ class _SignupScreenState extends State<SignupScreen> {
               }),
         ],
       ),
+      resizeToAvoidBottomInset: false,
     );
   }
 }
