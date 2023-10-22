@@ -11,7 +11,11 @@ class _EmailsignupState extends State<Emailsignup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(),
+      body: Center(
+        child: Column(
+          children: [TextField()],
+        ),
+      ),
     );
   }
 }

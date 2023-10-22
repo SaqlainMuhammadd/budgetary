@@ -1,3 +1,4 @@
+import 'package:budgetary_your_personal_finance_manager/emailsignup.dart';
 import 'package:budgetary_your_personal_finance_manager/login.dart';
 import 'package:flutter/material.dart';
 
@@ -129,42 +130,51 @@ class _SignupScreenState extends State<SignupScreen> {
           SizedBox(
             height: height * 0.01,
           ),
-          Container(
-            width: width * 0.9,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                color: Color.fromARGB(255, 0, 255, 238),
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  const BoxShadow(
-                    color: Color.fromARGB(255, 75, 72, 72),
-                    offset: Offset(
-                      1.0,
-                      1.0,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Emailsignup(),
+                  ));
+            },
+            child: Container(
+              width: width * 0.9,
+              height: height * 0.07,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 0, 255, 238),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    const BoxShadow(
+                      color: Color.fromARGB(255, 75, 72, 72),
+                      offset: Offset(
+                        1.0,
+                        1.0,
+                      ),
+                      blurRadius: 2.0,
+                      spreadRadius: 0.05,
                     ),
-                    blurRadius: 2.0,
-                    spreadRadius: 0.05,
-                  ),
-                ]),
-            child: Center(
-                child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                children: [
-                  Image.asset('assets/images/emailicon.png'),
-                  SizedBox(
-                    width: width * 0.17,
-                  ),
-                  Text(
-                    "Sign Up with E-mail",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            )),
+                  ]),
+              child: Center(
+                  child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/emailicon.png'),
+                    SizedBox(
+                      width: width * 0.17,
+                    ),
+                    Text(
+                      "Sign Up with E-mail",
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              )),
+            ),
           ),
           SizedBox(
             height: height * 0.03,
