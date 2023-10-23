@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Budgetary',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
+        primarySwatch: Colors.teal,
       ),
       home: const Splashscreen(),
     );

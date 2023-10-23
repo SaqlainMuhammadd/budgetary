@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:budgetary_your_personal_finance_manager/Introductory.dart';
 import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _SplashscreenState extends State<Splashscreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => SignupScreen(),
+            builder: (context) => IntroductoryScreen(),
           ));
     });
   }
@@ -28,6 +29,7 @@ class _SplashscreenState extends State<Splashscreen> {
     return Scaffold(
       body: Center(
         child: Container(
+          height: 500,
           child: Image.asset('assets/images/logo.png'),
         ),
       ),
