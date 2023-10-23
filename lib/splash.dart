@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:budgetary_your_personal_finance_manager/Introductory.dart';
-import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:flutter/material.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -19,7 +18,7 @@ class _SplashscreenState extends State<Splashscreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => IntroductoryScreen(),
+            builder: (context) => MyApp(),
           ));
     });
   }

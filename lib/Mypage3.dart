@@ -1,14 +1,14 @@
 import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:flutter/material.dart';
 
-class Mypage1 extends StatefulWidget {
-  const Mypage1({super.key});
+class Mypage3 extends StatefulWidget {
+  const Mypage3({super.key});
 
   @override
-  State<Mypage1> createState() => _Mypage1State();
+  State<Mypage3> createState() => _Mypage3State();
 }
 
-class _Mypage1State extends State<Mypage1> {
+class _Mypage3State extends State<Mypage3> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -19,11 +19,11 @@ class _Mypage1State extends State<Mypage1> {
             height: height * 0.09,
           ),
           Container(
-            child: Image.asset('assets/images/Mypage1.png'),
+            child: Image.asset('assets/images/Mypage3.png'),
           ),
           Container(
             child: Text(
-              'Your Finance in one Place',
+              'Track your Spending',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -38,15 +38,11 @@ class _Mypage1State extends State<Mypage1> {
                 ),
                 Center(
                   child: Text(
-                      '         Get the big picure on all your money.               '),
+                      '               Track and analyze your spendings               '),
                 ),
                 Center(
                   child: Text(
-                      '               Connect your bank accounts, savings,                 '),
-                ),
-                Center(
-                  child: Text(
-                      '               track cash and import data                '),
+                      '               immediately and automatically.                 '),
                 ),
               ],
             ),

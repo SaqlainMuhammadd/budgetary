@@ -1,14 +1,14 @@
 import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:flutter/material.dart';
 
-class Mypage1 extends StatefulWidget {
-  const Mypage1({super.key});
+class Mypage2 extends StatefulWidget {
+  const Mypage2({super.key});
 
   @override
-  State<Mypage1> createState() => _Mypage1State();
+  State<Mypage2> createState() => _Mypage2State();
 }
 
-class _Mypage1State extends State<Mypage1> {
+class _Mypage2State extends State<Mypage2> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -19,11 +19,11 @@ class _Mypage1State extends State<Mypage1> {
             height: height * 0.09,
           ),
           Container(
-            child: Image.asset('assets/images/Mypage1.png'),
+            child: Image.asset('assets/images/Mypage2.png'),
           ),
           Container(
             child: Text(
-              'Your Finance in one Place',
+              'Connect your Bank Accounts',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -38,19 +38,30 @@ class _Mypage1State extends State<Mypage1> {
                 ),
                 Center(
                   child: Text(
-                      '         Get the big picure on all your money.               '),
+                      '         Connect all your accounts from any bank.               '),
                 ),
                 Center(
                   child: Text(
-                      '               Connect your bank accounts, savings,                 '),
+                      '               Add savings, Credit cards, Paypal                 '),
                 ),
                 Center(
-                  child: Text(
-                      '               track cash and import data                '),
+                  child: Text('               and more.                '),
                 ),
               ],
             ),
           ),
+          SizedBox(
+            height: height * 0.09,
+          ),
+          OutlinedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignupScreen(),
+                    ));
+              },
+              child: Text('START NOW'))
         ],
       ),
     );
