@@ -3,7 +3,6 @@ import 'package:budgetary_your_personal_finance_manager/Mypage2.dart';
 import 'package:budgetary_your_personal_finance_manager/Mypage3.dart';
 import 'package:budgetary_your_personal_finance_manager/Mypage4.dart';
 import 'package:budgetary_your_personal_finance_manager/Mypage5.dart';
-import 'package:budgetary_your_personal_finance_manager/Mypage6.dart';
 import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
