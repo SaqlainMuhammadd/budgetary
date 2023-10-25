@@ -43,8 +43,9 @@ class _MyAppState extends State<MyApp> {
                     setState(() {
                       selectedPage = page;
                     });
+                    print("selectedPage $selectedPage");
                   },
-                  children: [
+                  children: const [
                     Mypage1(),
                     Mypage2(),
                     Mypage3(),
@@ -59,14 +60,16 @@ class _MyAppState extends State<MyApp> {
                 count: pageCount,
                 unselectedColor: Colors.black26,
                 selectedColor: Colors.blue,
-                duration: const Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 2),
                 boxShape: BoxShape.circle,
                 unselectedSize: Size(8, 8),
                 onItemClicked: (index) {
+                  print("index$index");
+                  print("page view $selectedPage");
                   _pageController.animateToPage(
                     index,
-                    duration: const Duration(milliseconds: 200),
-                    curve: Curves.easeInOut,
+                    duration: const Duration(seconds: 1),
+                    curve: Curves.easeOut,
                   );
                 },
               ),
