@@ -1,5 +1,7 @@
-import 'package:budgetary_your_personal_finance_manager/emailsignup.dart';
+import 'dart:io';
+
 import 'package:budgetary_your_personal_finance_manager/login.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -17,181 +19,221 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
-            height: height * 0.05,
-          ),
           Container(
-            height: height * 0.09,
-            width: width * 0.4,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/images/signuplogo.png'),
-                    fit: BoxFit.fill)),
-          ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: height * 0.38,
-                width: width * 0.9,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/signupscreen.png'),
-                        fit: BoxFit.fill)),
-              ),
+            child: Icon(
+              Icons.wallet,
+              size: 180,
+              color: Colors.white,
             ),
+            height: height * 0.3,
+            width: width,
+            color: Colors.teal,
+          ),
+          SizedBox(
+            height: height * 0.07,
           ),
           Text(
-            'Welcome to Budgetary',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            'Signup Below to create\n       secure account',
+            style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
           ),
-          Text('You Just took the first step to get your money into'),
-          Text('shape, Lets get started!'),
           SizedBox(
-            height: height * 0.01,
+            height: height * 0.07,
           ),
           Container(
-            width: width * 0.9,
-            height: height * 0.07,
+            height: height * 0.06,
+            width: width * 0.8,
             decoration: BoxDecoration(
-                color: Color.fromARGB(255, 0, 255, 238),
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  const BoxShadow(
-                    color: Color.fromARGB(255, 75, 72, 72),
-                    offset: Offset(
-                      1.0,
-                      1.0,
-                    ),
-                    blurRadius: 2.0,
-                    spreadRadius: 0.05,
-                  ),
-                ]),
-            child: Center(
-                child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                children: [
-                  Image.asset('assets/images/googleicon.png'),
-                  SizedBox(
-                    width: width * 0.17,
-                  ),
-                  Text(
-                    "Sign Up with Google",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            )),
-          ),
-          SizedBox(
-            height: height * 0.01,
-          ),
-          Container(
-            width: width * 0.9,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                color: Color.fromARGB(255, 0, 255, 238),
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [
-                  const BoxShadow(
-                    color: Color.fromARGB(255, 75, 72, 72),
-                    offset: Offset(
-                      1.0,
-                      1.0,
-                    ),
-                    blurRadius: 2.0,
-                    spreadRadius: 0.05,
-                  ),
-                ]),
-            child: Center(
-                child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                children: [
-                  Image.asset('assets/images/facebooklogo.png'),
-                  SizedBox(
-                    width: width * 0.17,
-                  ),
-                  Text(
-                    "Sign Up with Facebook",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            )),
-          ),
-          SizedBox(
-            height: height * 0.01,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Emailsignup(),
-                  ));
-            },
-            child: Container(
-              width: width * 0.9,
-              height: height * 0.07,
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 0, 255, 238),
-                  borderRadius: BorderRadius.circular(30),
-                  boxShadow: [
-                    const BoxShadow(
-                      color: Color.fromARGB(255, 75, 72, 72),
-                      offset: Offset(
-                        1.0,
-                        1.0,
+                color: Colors.teal, borderRadius: BorderRadius.circular(10)),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Container(
+                    height: height * 0.06,
+                    width: width * 0.1,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        bottomLeft: Radius.circular(8),
+                        topRight: Radius.circular(3),
+                        bottomRight: Radius.circular(3),
                       ),
-                      blurRadius: 2.0,
-                      spreadRadius: 0.05,
                     ),
-                  ]),
-              child: Center(
-                  child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Image.asset('assets/images/emailicon.png'),
-                    SizedBox(
-                      width: width * 0.17,
+                    child: Icon(
+                      Icons.facebook,
+                      size: 40,
+                      color: Colors.teal,
                     ),
-                    Text(
-                      "Sign Up with E-mail",
-                      style: TextStyle(
-                          fontSize: 15,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                  ),
                 ),
-              )),
+                SizedBox(
+                  width: width * 0.08,
+                ),
+                Text(
+                  'CONNECT WITH FACEBOOK',
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500),
+                )
+              ],
             ),
           ),
           SizedBox(
             height: height * 0.03,
           ),
-          Text('Already have account?'),
-          InkWell(
-              child: new Text(
-                'Login here',
-                style: TextStyle(color: Colors.blueAccent),
-              ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Loginscreen()));
-              }),
+          Container(
+            height: height * 0.06,
+            width: width * 0.8,
+            decoration: BoxDecoration(
+                color: Colors.teal, borderRadius: BorderRadius.circular(10)),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Container(
+                    height: height * 0.06,
+                    width: width * 0.1,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        bottomLeft: Radius.circular(8),
+                        topRight: Radius.circular(3),
+                        bottomRight: Radius.circular(3),
+                      ),
+                    ),
+                    child: Image.asset('assets/images/googleicon.png'),
+                  ),
+                ),
+                SizedBox(
+                  width: width * 0.08,
+                ),
+                Text(
+                  'CONNECT WITH GOOGLE',
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: height * 0.03,
+          ),
+          Container(
+            height: height * 0.06,
+            width: width * 0.8,
+            decoration: BoxDecoration(
+                color: Colors.teal, borderRadius: BorderRadius.circular(10)),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Container(
+                    height: height * 0.06,
+                    width: width * 0.1,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        bottomLeft: Radius.circular(8),
+                        topRight: Radius.circular(3),
+                        bottomRight: Radius.circular(3),
+                      ),
+                    ),
+                    child: Icon(
+                      Icons.email,
+                      size: 30,
+                      color: Colors.teal,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: width * 0.08,
+                ),
+                Text(
+                  'CONNECT WITH EMAIL',
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: height * 0.03,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Already have an account? '),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Loginscreen(),
+                      ));
+                },
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Loginscreen(),
+                        ));
+                  },
+                  child: Text(
+                    'LOG IN',
+                    style: TextStyle(color: Colors.teal),
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
-      resizeToAvoidBottomInset: false,
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: height * 0.12,
+          color: Colors.teal,
+          child: Center(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text:
+                                  'By signing up or connecting with the services above you agree to our ',
+                              style: TextStyle()),
+                          TextSpan(
+                              text: 'Terms of Service ',
+                              style: TextStyle(color: Colors.black),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {}),
+                          TextSpan(text: 'and acknowledge our '),
+                          TextSpan(
+                              text: 'Privacy Policy ',
+                              style: TextStyle(color: Colors.black),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {}),
+                          TextSpan(
+                            text: 'describing how we process your data.',
+                          )
+                        ])),
+                  ],
+                )),
+          ),
+        ),
+      ),
     );
   }
 }
