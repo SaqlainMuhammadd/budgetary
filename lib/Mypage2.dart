@@ -1,4 +1,3 @@
-import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:flutter/material.dart';
 
 class Mypage2 extends StatefulWidget {
@@ -50,18 +49,6 @@ class _Mypage2State extends State<Mypage2> {
               ],
             ),
           ),
-          SizedBox(
-            height: height * 0.09,
-          ),
-          OutlinedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SignupScreen(),
-                    ));
-              },
-              child: Text('START NOW'))
         ],
       ),
     );

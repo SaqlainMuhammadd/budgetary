@@ -1,4 +1,3 @@
-import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:flutter/material.dart';
 
 class Mypage1 extends StatefulWidget {

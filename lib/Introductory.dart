@@ -32,70 +32,62 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     const pageCount = 5;
 
-    return MaterialApp(
-      title: 'Page view dot indicator',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(
-          child: Column(
-            children: [
-              Expanded(
-                child: PageView(
-                    controller: _pageController,
-                    onPageChanged: (page) {
-                      setState(() {
-                        selectedPage = page;
-                      });
-                    },
-                    children: [
-                      Mypage1(),
-                      Mypage2(),
-                      Mypage3(),
-                      Mypage4(),
-                      Mypage5(),
-                      Mypage6(),
-                    ]),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: PageViewDotIndicator(
-                  currentItem: selectedPage,
-                  count: pageCount,
-                  unselectedColor: Colors.black26,
-                  selectedColor: Colors.blue,
-                  duration: const Duration(milliseconds: 200),
-                  boxShape: BoxShape.circle,
-                  unselectedSize: Size(8, 8),
-                  onItemClicked: (index) {
-                    _pageController.animateToPage(
-                      index,
-                      duration: const Duration(milliseconds: 200),
-                      curve: Curves.easeInOut,
-                    );
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: PageView(
+                  controller: _pageController,
+                  onPageChanged: (page) {
+                    setState(() {
+                      selectedPage = page;
+                    });
                   },
-                ),
+                  children: [
+                    Mypage1(),
+                    Mypage2(),
+                    Mypage3(),
+                    Mypage4(),
+                    Mypage5(),
+                  ]),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: PageViewDotIndicator(
+                currentItem: selectedPage,
+                count: pageCount,
+                unselectedColor: Colors.black26,
+                selectedColor: Colors.blue,
+                duration: const Duration(milliseconds: 200),
+                boxShape: BoxShape.circle,
+                unselectedSize: Size(8, 8),
+                onItemClicked: (index) {
+                  _pageController.animateToPage(
+                    index,
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                  );
+                },
               ),
-              SizedBox(
-                height: 30,
-              ),
-              OutlinedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignupScreen(),
-                        ));
-                  },
-                  child: Text('START NOW')),
-              SizedBox(
-                height: 25,
-              ),
-            ],
-          ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            OutlinedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupScreen(),
+                      ));
+                },
+                child: Text('START NOW')),
+            SizedBox(
+              height: 25,
+            ),
+          ],
         ),
       ),
     );
