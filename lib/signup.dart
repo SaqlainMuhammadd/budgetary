@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:budgetary_your_personal_finance_manager/login.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +60,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                     child: Icon(
                       Icons.facebook,
-                      size: 40,
+                      size: 35,
                       color: Colors.teal,
                     ),
                   ),
@@ -73,7 +71,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Text(
                   'CONNECT WITH FACEBOOK',
                   style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                       color: Colors.white,
                       fontWeight: FontWeight.w500),
                 )
@@ -113,7 +111,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Text(
                   'CONNECT WITH GOOGLE',
                   style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                       color: Colors.white,
                       fontWeight: FontWeight.w500),
                 )
@@ -157,7 +155,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Text(
                   'CONNECT WITH EMAIL',
                   style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                       color: Colors.white,
                       fontWeight: FontWeight.w500),
                 )
