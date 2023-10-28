@@ -1,4 +1,3 @@
-import 'package:budgetary_your_personal_finance_manager/signup.dart';
 import 'package:flutter/material.dart';
 
 class Loginscreen extends StatefulWidget {
@@ -17,8 +16,19 @@ class _LoginscreenState extends State<Loginscreen> {
         body: Column(
       children: [
         Container(
-          height: height * 0.3,
+          height: height * 0.4,
+          width: width,
           color: Colors.teal,
+          child: Container(
+            height: height * 0.001,
+            child: Image.asset(
+              'assets/images/logo.png',
+              fit: BoxFit.contain,
+            ),
+            decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                shape: BoxShape.circle),
+          ),
         )
       ],
     ));
