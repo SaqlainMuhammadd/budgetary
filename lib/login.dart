@@ -13,27 +13,38 @@ class _LoginscreenState extends State<Loginscreen> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
-        body: Container(
-      height: height * 0.4,
-      width: width,
-      color: Colors.teal,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            height: height * 0.2,
-            width: width * 0.4,
-            decoration: BoxDecoration(
-                //image: DecorationImage(
-                //image: AssetImage(
-                //    "assets/images/logosignin.png",
-                //  ),
-                //      fit: BoxFit.cover),
-                color: Color.fromARGB(255, 255, 255, 255),
-                shape: BoxShape.circle),
-          ),
-        ],
+      body: Container(
+        height: height * 0.4,
+        width: width,
+        color: Colors.teal,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: height * 0.2,
+              width: width * 0.4,
+              decoration: BoxDecoration(
+                  //image: DecorationImage(
+                  //image: AssetImage(
+                  //    "assets/images/logosignin.png",
+                  //  ),
+                  //      fit: BoxFit.cover),
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  shape: BoxShape.circle),
+            ),
+            SizedBox(
+              height: height * 0.03,
+            ),
+            Container(
+              child: Text('Welcome Back!'),
+            ),
+            SizedBox(
+              height: height * 0.03,
+            ),
+            TextField()
+          ],
+        ),
       ),
-    ));
+    );
   }
 }
