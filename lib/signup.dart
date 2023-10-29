@@ -18,7 +18,7 @@ class _SignupScreenState extends State<SignupScreen> {
       body: Column(
         children: [
           Container(
-            child: Icon(
+            child: const Icon(
               Icons.wallet,
               size: 180,
               color: Colors.white,
@@ -30,7 +30,7 @@ class _SignupScreenState extends State<SignupScreen> {
           SizedBox(
             height: height * 0.07,
           ),
-          Text(
+          const Text(
             'Signup Below to create\n       secure account',
             style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
           ),

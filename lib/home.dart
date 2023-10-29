@@ -61,6 +61,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: height * 0.2,
                     width: width,
                     color: Colors.teal,
+                  ),
+                  ListView.builder(
+                    itemBuilder: (context, index) {
+                      return ListTile();
+                    },
                   )
                 ],
               ),
