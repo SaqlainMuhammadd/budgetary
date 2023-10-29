@@ -46,27 +46,22 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: [
                   Container(
-                    child: Center(
-                      child: ListTile(
-                        iconColor: Colors.white,
-                        leading: CircleAvatar(
-                          radius: 20,
-                          backgroundImage:
-                              AssetImage('assets/images/facebooklogo.png'),
-                        ),
-                        title: Text('Saqlain Qureshi'),
-                        subtitle: Text('Profile'),
-                      ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: height * 0.2,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              border: Border.all(color: Colors.white, width: 2),
+                              shape: BoxShape.circle),
+                        )
+                      ],
                     ),
                     height: height * 0.2,
                     width: width,
                     color: Colors.teal,
                   ),
-                  ListView.builder(
-                    itemBuilder: (context, index) {
-                      return ListTile();
-                    },
-                  )
                 ],
               ),
             ),
@@ -81,7 +76,6 @@ class accounts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
-      color: Colors.blue,
     );
   }
 }
@@ -91,7 +85,6 @@ class budgetandgoals extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
-      color: const Color.fromARGB(255, 255, 187, 0),
     );
   }
 }
