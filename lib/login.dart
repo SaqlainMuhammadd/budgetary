@@ -31,11 +31,11 @@ class _LoginscreenState extends State<Loginscreen> {
                     height: height * 0.2,
                     width: width * 0.3,
                     decoration: BoxDecoration(
-                        //image: DecorationImage(
-                        //image: AssetImage(
-                        //    "assets/images/logosignin.png",
-                        //  ),
-                        //      fit: BoxFit.cover),
+                        image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/logo.png",
+                            ),
+                            fit: BoxFit.cover),
                         color: Color.fromARGB(255, 255, 255, 255),
                         shape: BoxShape.circle),
                   ),
@@ -118,7 +118,7 @@ class _LoginscreenState extends State<Loginscreen> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white.withOpacity(0.8)),
+                          color: Colors.white),
                     ),
                   ),
                 ),
