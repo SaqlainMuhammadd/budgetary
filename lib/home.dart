@@ -1,3 +1,4 @@
+import 'package:budgetary_your_personal_finance_manager/Profileeditingscreen.dart';
 import 'package:budgetary_your_personal_finance_manager/notification.dart';
 import 'package:flutter/material.dart';
 
@@ -46,22 +47,66 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: [
                   Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    height: height * 0.17,
+                    width: width,
+                    decoration: BoxDecoration(
+                      color: Colors.teal,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        SizedBox(
+                          width: width * 0.05,
+                        ),
                         Container(
+                          width: width * 0.19,
                           height: height * 0.2,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              border: Border.all(color: Colors.white, width: 2),
+                              border: Border.all(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  width: 2),
                               shape: BoxShape.circle),
+                        ),
+                        SizedBox(
+                          width: width * 0.05,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Saqlain Qureshi',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          Profileeditingscreen(),
+                                    ));
+                              },
+                              child: Text(
+                                'Profile',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
-                    height: height * 0.2,
-                    width: width,
-                    color: Colors.teal,
                   ),
+                  Container(
+                    height: height * 0.7,
+                    color: Colors.black87,
+                  )
                 ],
               ),
             ),
