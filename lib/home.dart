@@ -44,69 +44,65 @@ class _HomeScreenState extends State<HomeScreen> {
               ]),
             ),
             drawer: Drawer(
-              child: Column(
+              child: ListView(
                 children: [
                   Container(
-                    height: height * 0.17,
-                    width: width,
-                    decoration: BoxDecoration(
-                      color: Colors.teal,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: width * 0.05,
+                    color: Colors.teal,
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.person,
+                          color: Colors.white,
                         ),
-                        Container(
-                          width: width * 0.19,
-                          height: height * 0.2,
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: Color.fromARGB(255, 255, 255, 255),
-                                  width: 2),
-                              shape: BoxShape.circle),
-                        ),
-                        SizedBox(
-                          width: width * 0.05,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Saqlain Qureshi',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ),
-                            SizedBox(
-                              height: height * 0.01,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          Profileeditingscreen(),
-                                    ));
-                              },
-                              child: Text(
-                                'Profile',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            )
-                          ],
-                        )
-                      ],
+                      ),
+                      title: Text(
+                        'Saqlain Qureshi',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      subtitle: Text(
+                        'Profile',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
-                  Container(
-                    height: height * 0.7,
-                    color: Colors.black87,
-                  )
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.gpp_good_outlined),
+                    ),
+                    title: Text('Get Premium'),
+                  ),
+                  Divider(
+                    thickness: 1,
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.home_work_outlined),
+                    ),
+                    title: Text('Bank Sync'),
+                  ),
+                  Divider(
+                    thickness: 1,
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.home),
+                    ),
+                    title: Text('Home'),
+                  ),
+                  Divider(
+                    thickness: 1,
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.grid_on_rounded),
+                    ),
+                    title: Text('Records'),
+                  ),
                 ],
               ),
             ),
