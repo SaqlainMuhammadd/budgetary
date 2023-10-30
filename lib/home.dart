@@ -115,8 +115,88 @@ class _HomeScreenState extends State<HomeScreen> {
 class accounts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
+    return Scaffold(
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'List of Accounts',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                width: 130,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(Icons.settings),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 95),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'CASH',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        '\$0.00',
+                        style: TextStyle(color: Colors.white),
+                      )
+                    ],
+                  ),
+                ),
+                height: 55,
+                width: 165,
+                decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.circular(10)),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'ADD ACCOUNT',
+                        style: TextStyle(color: Colors.teal),
+                      ),
+                      Icon(
+                        Icons.add,
+                        color: Colors.teal,
+                      )
+                    ],
+                  ),
+                  height: 55,
+                  width: 165,
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.teal),
+                      borderRadius: BorderRadius.circular(10)),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
