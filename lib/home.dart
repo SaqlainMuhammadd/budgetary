@@ -9,6 +9,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String dropdownvalue = 'One';
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -102,6 +104,34 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     title: Text('Records'),
                   ),
+                  Divider(
+                    thickness: 1,
+                  ),
+                  ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.grid_on_rounded),
+                      ),
+                      title: Text('Statistics'),
+                      trailing: DropdownButton<String>(
+                        value: dropdownvalue,
+                        icon: Icon(Icons.arrow_drop_down),
+                        style: TextStyle(
+                            color: const Color.fromARGB(255, 0, 0, 0)),
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
+                        items: const [
+                          DropdownMenuItem<String>(
+                              value: 'One', child: Text('One')),
+                          DropdownMenuItem<String>(
+                              value: 'Two', child: Text('Two')),
+                          DropdownMenuItem<String>(
+                              value: 'Three', child: Text('Three'))
+                        ],
+                      )),
                 ],
               ),
             ),
