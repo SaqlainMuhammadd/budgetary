@@ -70,7 +70,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ListTile(
                     leading: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.gpp_good_outlined),
+                      child: Icon(
+                        Icons.gpp_good_outlined,
+                        color: Colors.teal,
+                      ),
                     ),
                     title: Text('Get Premium'),
                   ),
@@ -80,42 +83,61 @@ class _HomeScreenState extends State<HomeScreen> {
                   ListTile(
                     leading: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.home_work_outlined),
+                      child: Icon(
+                        Icons.home_work_outlined,
+                        color: Colors.teal,
+                      ),
                     ),
                     title: Text('Bank Sync'),
                   ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.add_chart_rounded,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Reports'),
+                  ),
                   Divider(
                     thickness: 1,
                   ),
                   ListTile(
                     leading: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.home),
+                      child: Icon(
+                        Icons.home,
+                        color: Colors.teal,
+                      ),
                     ),
                     title: Text('Home'),
                   ),
-                  Divider(
-                    thickness: 1,
-                  ),
                   ListTile(
                     leading: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.grid_on_rounded),
+                      child: Icon(
+                        Icons.grid_on_rounded,
+                        color: Colors.teal,
+                      ),
                     ),
                     title: Text('Records'),
-                  ),
-                  Divider(
-                    thickness: 1,
                   ),
                   ListTile(
                       leading: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.grid_on_rounded),
+                        child: Icon(
+                          Icons.grid_on_rounded,
+                          color: Colors.teal,
+                        ),
                       ),
                       title: Text('Statistics'),
                       trailing: DropdownButton<String>(
                         value: dropdownvalue,
-                        icon: Icon(Icons.arrow_drop_down),
+                        icon: Icon(
+                          Icons.arrow_drop_down,
+                          color: Colors.teal,
+                        ),
                         style: TextStyle(
                             color: const Color.fromARGB(255, 0, 0, 0)),
                         onChanged: (String? newValue) {
@@ -132,6 +154,122 @@ class _HomeScreenState extends State<HomeScreen> {
                               value: 'Three', child: Text('Three'))
                         ],
                       )),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.send_time_extension_sharp,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Planned Payments'),
+                  ),
+                  Divider(
+                    thickness: 1,
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.payments_sharp,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Budgets'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.payments_sharp,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Debts'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.track_changes_rounded,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Goals'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.business_center_rounded,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Wallet For Business'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.shopping_cart_rounded,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Shopping List'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.currency_exchange,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Currency Rates'),
+                  ),
+                  Divider(
+                    thickness: 1,
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.person_pin_outlined,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Invite Friends'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.share,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Follow Us'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.question_answer_sharp,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Help'),
+                  ),
+                  ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.settings_outlined,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    title: Text('Settings'),
+                  ),
                 ],
               ),
             ),
