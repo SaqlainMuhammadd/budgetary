@@ -1,3 +1,4 @@
+import 'package:budgetary_your_personal_finance_manager/getpremium.dart';
 import 'package:budgetary_your_personal_finance_manager/notification.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+
     return DefaultTabController(
         length: 2,
         child: Scaffold(
@@ -67,15 +69,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.gpp_good_outlined,
-                        color: Colors.teal,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => getpremiumscreen(),
+                          ));
+                    },
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.gpp_good_outlined,
+                          color: Colors.teal,
+                        ),
                       ),
+                      title: Text('Get Premium'),
                     ),
-                    title: Text('Get Premium'),
                   ),
                   Divider(
                     thickness: 1,

@@ -101,18 +101,18 @@ class _LoginscreenState extends State<Loginscreen> {
             SizedBox(
               height: height * 0.02,
             ),
-            Container(
-                height: height * 0.06,
-                width: width * 0.8,
-                child: Center(
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
-                          ));
-                    },
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ));
+              },
+              child: Container(
+                  height: height * 0.06,
+                  width: width * 0.8,
+                  child: Center(
                     child: Text(
                       'LOGIN',
                       style: TextStyle(
@@ -121,16 +121,16 @@ class _LoginscreenState extends State<Loginscreen> {
                           color: Colors.white),
                     ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(8),
-                    bottomLeft: Radius.circular(8),
-                    topRight: Radius.circular(3),
-                    bottomRight: Radius.circular(3),
-                  ),
-                ))
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      bottomLeft: Radius.circular(8),
+                      topRight: Radius.circular(3),
+                      bottomRight: Radius.circular(3),
+                    ),
+                  )),
+            )
           ],
         ),
       ),
