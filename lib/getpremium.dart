@@ -13,7 +13,6 @@ class _getpremiumscreenState extends State<getpremiumscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
         title: Text('Get Premimum'),
         backgroundColor: Colors.teal,
         actions: [

@@ -1,3 +1,4 @@
+import 'package:budgetary_your_personal_finance_manager/banksync.dart';
 import 'package:budgetary_your_personal_finance_manager/getpremium.dart';
 import 'package:budgetary_your_personal_finance_manager/notification.dart';
 import 'package:flutter/material.dart';
@@ -91,15 +92,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   Divider(
                     thickness: 1,
                   ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.home_work_outlined,
-                        color: Colors.teal,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => banksyncscreen(),
+                          ));
+                    },
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.home_work_outlined,
+                          color: Colors.teal,
+                        ),
                       ),
+                      title: Text('Bank Sync'),
                     ),
-                    title: Text('Bank Sync'),
                   ),
                   ListTile(
                     leading: Padding(
@@ -134,37 +144,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     title: Text('Records'),
                   ),
-                  ListTile(
-                      leading: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.grid_on_rounded,
-                          color: Colors.teal,
-                        ),
-                      ),
-                      title: Text('Statistics'),
-                      trailing: DropdownButton<String>(
-                        value: dropdownvalue,
-                        icon: Icon(
-                          Icons.arrow_drop_down,
-                          color: Colors.teal,
-                        ),
-                        style: TextStyle(
-                            color: const Color.fromARGB(255, 0, 0, 0)),
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            dropdownvalue = newValue!;
-                          });
-                        },
-                        items: const [
-                          DropdownMenuItem<String>(
-                              value: 'One', child: Text('One')),
-                          DropdownMenuItem<String>(
-                              value: 'Two', child: Text('Two')),
-                          DropdownMenuItem<String>(
-                              value: 'Three', child: Text('Three'))
-                        ],
-                      )),
                   ListTile(
                     leading: Padding(
                       padding: const EdgeInsets.all(8.0),
