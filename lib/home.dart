@@ -1,6 +1,9 @@
 import 'package:budgetary_your_personal_finance_manager/banksync.dart';
 import 'package:budgetary_your_personal_finance_manager/getpremium.dart';
 import 'package:budgetary_your_personal_finance_manager/notification.dart';
+import 'package:budgetary_your_personal_finance_manager/plannedpayments.dart';
+import 'package:budgetary_your_personal_finance_manager/records.dart';
+import 'package:budgetary_your_personal_finance_manager/reports.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -111,48 +114,84 @@ class _HomeScreenState extends State<HomeScreen> {
                       title: Text('Bank Sync'),
                     ),
                   ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.add_chart_rounded,
-                        color: Colors.teal,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ReportsScreen(),
+                          ));
+                    },
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.add_chart_rounded,
+                          color: Colors.teal,
+                        ),
                       ),
+                      title: Text('Reports'),
                     ),
-                    title: Text('Reports'),
                   ),
                   Divider(
                     thickness: 1,
                   ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.home,
-                        color: Colors.teal,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ));
+                    },
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.home,
+                          color: Colors.teal,
+                        ),
                       ),
+                      title: Text('Home'),
                     ),
-                    title: Text('Home'),
                   ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.grid_on_rounded,
-                        color: Colors.teal,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RecordsScreen(),
+                          ));
+                    },
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.grid_on_rounded,
+                          color: Colors.teal,
+                        ),
                       ),
+                      title: Text('Records'),
                     ),
-                    title: Text('Records'),
                   ),
-                  ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.send_time_extension_sharp,
-                        color: Colors.teal,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PlannedpaymentsScreen(),
+                          ));
+                    },
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.send_time_extension_sharp,
+                          color: Colors.teal,
+                        ),
                       ),
+                      title: Text('Planned Payments'),
                     ),
-                    title: Text('Planned Payments'),
                   ),
                   Divider(
                     thickness: 1,
