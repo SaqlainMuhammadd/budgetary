@@ -18,9 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
-
     return DefaultTabController(
         length: 2,
         child: Scaffold(
@@ -400,8 +397,19 @@ class accounts extends StatelessWidget {
 class budgetandgoals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
+    return Scaffold(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 100,
+              width: 400,
+              color: Colors.teal,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
