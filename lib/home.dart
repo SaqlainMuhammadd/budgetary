@@ -1,4 +1,6 @@
 import 'package:budgetary_your_personal_finance_manager/banksync.dart';
+import 'package:budgetary_your_personal_finance_manager/createbudget.dart';
+import 'package:budgetary_your_personal_finance_manager/creategoal.dart';
 import 'package:budgetary_your_personal_finance_manager/getpremium.dart';
 import 'package:budgetary_your_personal_finance_manager/notification.dart';
 import 'package:budgetary_your_personal_finance_manager/plannedpayments.dart';
@@ -403,9 +405,92 @@ class budgetandgoals extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 100,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Budgets                                                                       ',
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                        'How much you can spend to meet your goals            '),
+                    Container(
+                      height: 15,
+                    ),
+                    Text(
+                        'This month                                                                         '),
+                    Container(
+                      height: 20,
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CreatebudgetScreen(),
+                              ));
+                        },
+                        child: Text(
+                            'CREATE BUDGET                                                                                      '))
+                  ],
+                ),
+              ),
+              height: 160,
               width: 400,
-              color: Colors.teal,
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 5,
+                    )
+                  ]),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Goals                                                                       ',
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    Text('How much I already saved            '),
+                    Container(
+                      height: 15,
+                    ),
+                    Container(
+                      height: 20,
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CreategoalScreen(),
+                              ));
+                        },
+                        child: Text(
+                            'CREATE GOAlS                                                                                      '))
+                  ],
+                ),
+              ),
+              height: 160,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 5,
+                    )
+                  ]),
             ),
           ),
         ],
