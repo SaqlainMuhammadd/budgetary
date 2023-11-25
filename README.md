@@ -56,7 +56,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ![Group 5396](https://github.com/MuhammadSaqlain143/budgetary/assets/129774784/144d4637-1585-494b-8cea-ba275a99cb32)
 
-![Splash Screen](https://github.com/MuhammadSaqlain143/budgetary/assets/129774784/8ea45324-2964-4c40-a86d-4be1f58f91a8)
+
+
+
+![Splash Screen](https://github.com/MuhammadSaqlain143/budgetary/assets/129774784/8ea45324-2964-4c40-a86d-4be1f58f91a8) 
 ![Onboarding](https://github.com/MuhammadSaqlain143/budgetary/assets/129774784/19ed9cfb-caa0-480a-80eb-108479e7357b)
 ![Homepage](https://github.com/MuhammadSaqlain143/budgetary/assets/129774784/932faf53-5e75-4382-9b80-1622a62d4e5c)
 ![Statistic](https://github.com/MuhammadSaqlain143/budgetary/assets/129774784/801269d7-b237-4c2e-a34c-bf672b34ce54)
