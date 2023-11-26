@@ -5,7 +5,10 @@
 **Project Name:** budgetary_your_personal_finance_manager
 **Technology Stack:** Flutter, Dart
 **Team Lead:** Muhammad Saqlain
-**Team Members:** Nadeem Malik, Farhan Khan
+**Team Members:** Umer Naeem, Nadeem Malik, Farhan Khan 
+
+![Group 5396](https://github.com/MuhammadSaqlain143/budgetary/assets/129774784/a854ed0a-1d96-499b-8113-c0fe914d09e9)
+
 
 ## Table of Contents
 
