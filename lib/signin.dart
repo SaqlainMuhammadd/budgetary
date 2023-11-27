@@ -1,3 +1,5 @@
+import 'package:budgetary_your_personal_finance_manager/Signup.dart';
+import 'package:budgetary_your_personal_finance_manager/forgotten.dart';
 import 'package:flutter/material.dart';
 
 class SigninScreen extends StatefulWidget {
@@ -19,11 +21,24 @@ class _SigninScreenState extends State<SigninScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(color: Colors.teal, Icons.arrow_back_rounded)),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: height * 0.05,
+                width: width * 0.09,
+                child: Center(
+                  child: Icon(
+                    Icons.keyboard_arrow_left_rounded,
+                    color: Colors.white,
+                    size: 35,
+                  ),
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.teal, borderRadius: BorderRadius.circular(8)),
+              ),
+            ),
+            SizedBox(
+              height: height * 0.1,
             ),
             Padding(
               padding: const EdgeInsets.all(10),
@@ -66,9 +81,18 @@ class _SigninScreenState extends State<SigninScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
-                    'Forgot Password?',
-                    style: TextStyle(color: Colors.teal),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => forgottenScreen(),
+                          ));
+                    },
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStyle(color: Colors.teal),
+                    ),
                   ),
                 ],
               ),
@@ -174,7 +198,7 @@ class _SigninScreenState extends State<SigninScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SigninScreen(),
+                          builder: (context) => signupScreen(),
                         ));
                   },
                   child: Text(
