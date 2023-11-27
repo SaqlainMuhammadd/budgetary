@@ -14,9 +14,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Budgetary',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
-        primarySwatch: Colors.teal,
-      ),
+          scaffoldBackgroundColor: Colors.blue[50],
+          primarySwatch: Colors.teal,
+          textTheme: TextTheme(
+            displayLarge: TextStyle(
+                fontFamily: 'montserrat',
+                fontSize: 25,
+                color: Colors.teal,
+                fontWeight: FontWeight.bold),
+            bodyLarge: TextStyle(fontSize: 18, color: Colors.white),
+          )),
       home: const Splashscreen(),
     );
   }
