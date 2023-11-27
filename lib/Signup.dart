@@ -21,7 +21,13 @@ class _signupScreenState extends State<signupScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SigninScreen(),
+                    ));
+              },
               child: Container(
                 height: height * 0.05,
                 width: width * 0.09,

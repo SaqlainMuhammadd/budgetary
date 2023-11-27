@@ -1,3 +1,4 @@
+import 'package:budgetary_your_personal_finance_manager/signin.dart';
 import 'package:flutter/material.dart';
 
 class forgottenScreen extends StatefulWidget {
@@ -20,7 +21,13 @@ class _forgottenScreenState extends State<forgottenScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SigninScreen(),
+                    ));
+              },
               child: Container(
                 height: height * 0.05,
                 width: width * 0.09,
