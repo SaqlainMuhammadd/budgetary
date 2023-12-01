@@ -19,6 +19,11 @@ class _homepageState extends State<homepage> {
             height: height * 0.4,
             width: width,
             decoration: BoxDecoration(color: Colors.teal),
+          ),
+          Container(
+            height: height * 0.4,
+            width: width,
+            decoration: BoxDecoration(color: Colors.teal),
           )
         ],
       ),
