@@ -1,5 +1,6 @@
 import 'package:budgetary_your_personal_finance_manager/Signup.dart';
 import 'package:budgetary_your_personal_finance_manager/forgotten.dart';
+import 'package:budgetary_your_personal_finance_manager/homepage.dart';
 import 'package:flutter/material.dart';
 
 class SigninScreen extends StatefulWidget {
@@ -114,7 +115,13 @@ class _SigninScreenState extends State<SigninScreen> {
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => homepage(),
+                          ));
+                    },
                     child: Text(
                       "LOGIN",
                       style: TextStyle(fontWeight: FontWeight.bold),

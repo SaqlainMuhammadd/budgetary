@@ -16,14 +16,29 @@ class _homepageState extends State<homepage> {
       body: Stack(
         children: [
           Container(
-            height: height * 0.4,
+            height: height,
             width: width,
-            decoration: BoxDecoration(color: Colors.teal),
+            decoration: BoxDecoration(color: Colors.blue[50]),
           ),
           Container(
             height: height * 0.4,
             width: width,
-            decoration: BoxDecoration(color: Colors.teal),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+                color: Colors.teal),
+          ),
+          Positioned(
+            top: height * 0.2,
+            left: width * 0.05,
+            child: Container(
+              height: height * 0.3,
+              width: width * 0.9,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: const Color.fromARGB(255, 252, 252, 252)),
+            ),
           )
         ],
       ),
