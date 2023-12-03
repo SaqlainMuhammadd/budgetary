@@ -27,17 +27,31 @@ class _homepageState extends State<homepage> {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20)),
-                color: Colors.teal),
+                color: Colors.teal,
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      blurRadius: 5,
+                      spreadRadius: 3,
+                      offset: Offset(0, 2))
+                ]),
           ),
           Positioned(
-            top: height * 0.2,
+            top: height * 0.25,
             left: width * 0.05,
             child: Container(
-              height: height * 0.3,
+              height: height * 0.26,
               width: width * 0.9,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: const Color.fromARGB(255, 252, 252, 252)),
+                  color: const Color.fromARGB(255, 252, 252, 252),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        blurRadius: 5,
+                        spreadRadius: 3,
+                        offset: Offset(0, 2))
+                  ]),
             ),
           )
         ],
