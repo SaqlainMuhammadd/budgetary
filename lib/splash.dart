@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:budgetary_your_personal_finance_manager/Onboarding.dart';
-import 'package:budgetary_your_personal_finance_manager/homepage.dart';
 import 'package:flutter/material.dart';
 
 class Splashscreen extends StatefulWidget {
