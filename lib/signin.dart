@@ -124,7 +124,10 @@ class _SigninScreenState extends State<SigninScreen> {
                     },
                     child: Text(
                       "LOGIN",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.teal,
+                      ),
                     )),
               ),
             ),
@@ -151,7 +154,12 @@ class _SigninScreenState extends State<SigninScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10),
-                  child: Text('Or Login with'),
+                  child: Text(
+                    'Or Login with',
+                    style: TextStyle(
+                      color: Colors.teal,
+                    ),
+                  ),
                 ),
                 Container(
                   height: height * 0.002,
@@ -179,18 +187,28 @@ class _SigninScreenState extends State<SigninScreen> {
                 SizedBox(
                   width: width * 0.05,
                 ),
-                ElevatedButton(onPressed: () {}, child: Icon(Icons.facebook)),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Icon(
+                      Icons.facebook,
+                      color: Colors.teal,
+                    )),
                 SizedBox(
                   width: width * 0.05,
                 ),
-                ElevatedButton(onPressed: () {}, child: Icon(Icons.apple)),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Icon(
+                      Icons.apple,
+                      color: Colors.teal,
+                    )),
                 SizedBox(
                   width: width * 0.05,
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   child: Image.asset(
-                    color: Colors.white,
+                    color: Colors.teal,
                     'assets/images/googlelogo.png',
                     width: width * 0.04,
                     height: height * 0.04,
@@ -215,7 +233,7 @@ class _SigninScreenState extends State<SigninScreen> {
                         ));
                   },
                   child: Text(
-                    ' Register Now',
+                    ' Sign Up',
                     style: TextStyle(color: Colors.teal),
                   ),
                 )

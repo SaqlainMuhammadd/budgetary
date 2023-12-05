@@ -104,7 +104,10 @@ class _signupScreenState extends State<signupScreen> {
                             borderRadius: BorderRadius.circular(20))),
                     onPressed: () {},
                     child: Text(
-                      "CREATE ACCOUNT",
+                      "Sign Up",
+                      style: TextStyle(
+                        color: Colors.teal,
+                      ),
                     )),
               ),
             ),
@@ -131,7 +134,12 @@ class _signupScreenState extends State<signupScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10),
-                  child: Text('Or Continue with'),
+                  child: Text(
+                    'Or Continue with',
+                    style: TextStyle(
+                      color: Colors.teal,
+                    ),
+                  ),
                 ),
                 Container(
                   height: height * 0.002,
@@ -159,18 +167,28 @@ class _signupScreenState extends State<signupScreen> {
                 SizedBox(
                   width: width * 0.05,
                 ),
-                ElevatedButton(onPressed: () {}, child: Icon(Icons.facebook)),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Icon(
+                      Icons.facebook,
+                      color: Colors.teal,
+                    )),
                 SizedBox(
                   width: width * 0.05,
                 ),
-                ElevatedButton(onPressed: () {}, child: Icon(Icons.apple)),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Icon(
+                      Icons.apple,
+                      color: Colors.teal,
+                    )),
                 SizedBox(
                   width: width * 0.05,
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   child: Image.asset(
-                    color: Colors.white,
+                    color: Colors.teal,
                     'assets/images/googlelogo.png',
                     width: width * 0.04,
                     height: height * 0.04,
