@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:budgetary_your_personal_finance_manager/Onboarding.dart';
+import 'package:budgetary_your_personal_finance_manager/homepage.dart';
 import 'package:flutter/material.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -12,7 +14,13 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {});
+    Timer(Duration(seconds: 2), () {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => OnboardingScreen(),
+          ));
+    });
   }
 
   @override
