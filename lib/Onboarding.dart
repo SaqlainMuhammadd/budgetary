@@ -18,42 +18,54 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            height: height * 0.5,
-            width: width * 0.5,
-            child: Image.asset('assets/images/onboarding.png'),
+          Center(
+            child: Container(
+              height: height * 0.5,
+              width: width * 0.5,
+              child: Image.asset('assets/images/onboarding.png'),
+            ),
           ),
-          Text(
-            'SPEND SMARTER\n     SAVE MORE',
-            style: Theme.of(context).textTheme.displayLarge,
+          Center(
+            child: Text(
+              'SPEND SMARTER\n     SAVE MORE',
+              style: Theme.of(context).textTheme.displayLarge,
+            ),
           ),
           SizedBox(
             height: height * 0.01,
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => signupScreen(),
-                  ));
-            },
-            child: Card(
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25)),
+          Center(
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => signupScreen(),
+                    ));
+              },
               child: Container(
                 child: Center(
-                    child: Text(
-                  'GET STARTED',
-                  style: Theme.of(context).textTheme.bodyLarge,
-                )),
-                width: width * 0.3,
+                  child: Text(
+                    'GET STARTED',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyLarge!
+                        .copyWith(fontSize: 15),
+                  ),
+                ),
+                width: width * 0.5,
                 height: height * 0.05,
                 decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.circular(25),
-                ),
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.circular(25),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black45,
+                        blurRadius: 5,
+                        offset: Offset(0, 2),
+                        spreadRadius: 0.5,
+                      )
+                    ]),
               ),
             ),
           ),

@@ -15,11 +15,15 @@ class MyApp extends StatelessWidget {
       title: 'Budgetary',
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.blue[50],
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.teal,
+            elevation: 0.0,
+          ),
           primarySwatch: Colors.teal,
           textTheme: TextTheme(
             displayLarge: TextStyle(
                 fontFamily: 'montserrat',
-                fontSize: 25,
+                fontSize: 20,
                 color: Colors.teal,
                 fontWeight: FontWeight.bold),
             bodyLarge: TextStyle(fontSize: 18, color: Colors.white),

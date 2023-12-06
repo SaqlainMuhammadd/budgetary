@@ -1,3 +1,4 @@
+import 'package:budgetary_your_personal_finance_manager/NotificationScreen.dart';
 import 'package:flutter/material.dart';
 
 class homepage extends StatefulWidget {
@@ -21,6 +22,50 @@ class _homepageState extends State<homepage> {
             decoration: BoxDecoration(color: Colors.blue[50]),
           ),
           Container(
+            child: Padding(
+              padding: const EdgeInsets.all(25),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: height * 0.05,
+                  ),
+                  Text(
+                    'Good Afternoon',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Muhammad Saqlain',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge!
+                            .copyWith(fontWeight: FontWeight.w600),
+                      ),
+                      Container(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => NotificationScreen(),
+                                ));
+                          },
+                          child: Icon(
+                            Icons.notifications_active_sharp,
+                            size: 25,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
             height: height * 0.4,
             width: width,
             decoration: BoxDecoration(
@@ -44,7 +89,7 @@ class _homepageState extends State<homepage> {
               width: width * 0.9,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: const Color.fromARGB(255, 252, 252, 252),
+                  color: Colors.teal[600],
                   boxShadow: [
                     BoxShadow(
                         color: Colors.grey.withOpacity(0.5),
