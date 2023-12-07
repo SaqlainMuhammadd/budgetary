@@ -85,6 +85,7 @@ class _homepageState extends State<homepage> {
             top: height * 0.25,
             left: width * 0.05,
             child: Container(
+              child: Center(child: Text('Total Balance')),
               height: height * 0.26,
               width: width * 0.9,
               decoration: BoxDecoration(
