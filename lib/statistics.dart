@@ -10,6 +10,12 @@ class statisticsScreen extends StatefulWidget {
 class _statisticsScreenState extends State<statisticsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        color: Colors.amber,
+        height: double.infinity,
+        width: double.infinity,
+      ),
+    );
   }
 }
