@@ -1,6 +1,6 @@
+import 'package:budgetary_your_personal_finance_manager/HomeScreen.dart';
 import 'package:budgetary_your_personal_finance_manager/Signup.dart';
 import 'package:budgetary_your_personal_finance_manager/forgotten.dart';
-import 'package:budgetary_your_personal_finance_manager/homepage.dart';
 import 'package:flutter/material.dart';
 
 class SigninScreen extends StatefulWidget {
@@ -119,7 +119,7 @@ class _SigninScreenState extends State<SigninScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => homepage(),
+                            builder: (context) => HomeScreen(),
                           ));
                     },
                     child: Text(

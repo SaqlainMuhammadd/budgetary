@@ -11,11 +11,14 @@ class _statisticsScreenState extends State<statisticsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.amber,
-        height: double.infinity,
-        width: double.infinity,
-      ),
-    );
+        body: Stack(
+      children: [
+        Container(
+          height: 200,
+          width: 300,
+          color: Colors.red,
+        )
+      ],
+    ));
   }
 }
