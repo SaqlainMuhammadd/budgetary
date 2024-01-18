@@ -84,20 +84,50 @@ class _homepageState extends State<homepage> {
           Positioned(
             top: height * 0.25,
             left: width * 0.05,
-            child: Container(
-              child: Center(child: Text('Total Balance')),
-              height: height * 0.26,
-              width: width * 0.9,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.teal[600],
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        blurRadius: 5,
-                        spreadRadius: 3,
-                        offset: Offset(0, 2))
-                  ]),
+            child: Column(
+              children: [
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(13),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Total Balance',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                              color: Colors.white),
+                        ),
+                        Icon(
+                          Icons.arrow_drop_up,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 145,
+                        ),
+                        Icon(
+                          Icons.more_horiz,
+                          color: Colors.white,
+                        )
+                      ],
+                    ),
+                  ),
+                  height: height * 0.26,
+                  width: width * 0.9,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.teal[600],
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 5,
+                            spreadRadius: 3,
+                            offset: Offset(0, 2))
+                      ]),
+                ),
+              ],
             ),
           )
         ],
