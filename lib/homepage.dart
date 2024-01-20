@@ -17,6 +17,21 @@ class _homepageState extends State<homepage> {
       body: Stack(
         children: [
           Container(
+            // child: Column(
+            //   children: [
+            //     Row(
+            //       children: [
+            //         SizedBox(
+            //           height: 250,
+            //         ),
+            //         Text("Transaction History"),
+            //       ],
+            //     ),
+            //     Row(
+            //       children: [Icon(Icons.add)],
+            //     )
+            //   ],
+            // ),
             height: height,
             width: width,
             decoration: BoxDecoration(color: Colors.blue[50]),
@@ -62,7 +77,7 @@ class _homepageState extends State<homepage> {
                         ),
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -88,28 +103,98 @@ class _homepageState extends State<homepage> {
               children: [
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.all(13),
-                    child: Row(
+                    padding: const EdgeInsets.only(left: 20, top: 25),
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Total Balance',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 15,
-                              color: Colors.white),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Total Balance',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15,
+                                  color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.arrow_drop_up,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 145,
+                            ),
+                            Icon(
+                              Icons.more_horiz,
+                              color: Colors.white,
+                            )
+                          ],
                         ),
-                        Icon(
-                          Icons.arrow_drop_up,
-                          color: Colors.white,
+                        Text(
+                          'PKR   2,548.00',
+                          style: Theme.of(context)
+                              .textTheme
+                              .displayLarge!
+                              .copyWith(color: Colors.white, fontSize: 25),
                         ),
                         SizedBox(
-                          width: 145,
+                          height: 20,
                         ),
-                        Icon(
-                          Icons.more_horiz,
-                          color: Colors.white,
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_circle_down_rounded,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 3,
+                            ),
+                            Text(
+                              "Income",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              width: 105,
+                            ),
+                            Icon(
+                              Icons.arrow_circle_up_rounded,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 3,
+                            ),
+                            Text(
+                              "Expense",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              'Rs 1,840.00',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              width: 80,
+                            ),
+                            Text(
+                              'Rs 1,840.00',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
                         )
                       ],
                     ),
@@ -129,7 +214,7 @@ class _homepageState extends State<homepage> {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
