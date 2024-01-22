@@ -165,7 +165,7 @@ class _Transactiondetailscreen_screenState
                         ),
                         const Spacer(),
                         Text(
-                          'Mohsin Malik',
+                          'Umar',
                           style: GoogleFonts.aBeeZee(
                               color: MythemeClass.blackcolor,
                               fontWeight: FontWeight.normal,

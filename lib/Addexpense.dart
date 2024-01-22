@@ -60,41 +60,43 @@ class _AddExpense_ScreenState extends State<AddExpense_Screen> {
               painter: adminclipper(),
             ),
           ),
-          Positioned(
-            top: height * 0.05,
-            child: Row(
-              children: [
-                SizedBox(
-                  width: width * 0.13,
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_back_ios_new,
-                    color: MythemeClass.whitecolor,
+          Center(
+            child: Positioned(
+              top: height * 0.05,
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: width * 0.13,
                   ),
-                ),
-                SizedBox(
-                  width: width * 0.05,
-                ),
-                Text(
-                  'Add Expense',
-                  style: GoogleFonts.aBeeZee(
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_back_ios_new,
                       color: MythemeClass.whitecolor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),
-                ),
-                SizedBox(
-                  width: width * 0.05,
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.more_horiz_rounded,
-                    color: MythemeClass.whitecolor,
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    width: width * 0.05,
+                  ),
+                  Text(
+                    'Add Expense',
+                    style: GoogleFonts.aBeeZee(
+                        color: MythemeClass.whitecolor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                  SizedBox(
+                    width: width * 0.05,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.more_horiz_rounded,
+                      color: MythemeClass.whitecolor,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Positioned(
@@ -124,11 +126,12 @@ class _AddExpense_ScreenState extends State<AddExpense_Screen> {
                       height: height * 0.01,
                     ),
                     TextFormField(
+                      style: TextStyle(color: Colors.black),
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           contentPadding:
                               const EdgeInsets.symmetric(horizontal: 20),
-                          hintText: 'NetFlix',
+                          hintText: 'Expense Name',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                           ),
@@ -149,6 +152,7 @@ class _AddExpense_ScreenState extends State<AddExpense_Screen> {
                       height: height * 0.01,
                     ),
                     TextFormField(
+                      style: TextStyle(color: Colors.black),
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           contentPadding:
@@ -189,7 +193,7 @@ class _AddExpense_ScreenState extends State<AddExpense_Screen> {
                                 Border.all(color: MythemeClass.black54color)),
                         child: Center(
                           child: Text(
-                            'Tue 22 Feb 2022',
+                            'Sat 15 Nov 2003',
                             style: GoogleFonts.aBeeZee(
                                 color: MythemeClass.black54color,
                                 fontWeight: FontWeight.bold,
@@ -216,6 +220,7 @@ class _AddExpense_ScreenState extends State<AddExpense_Screen> {
                       height: height * 0.01,
                     ),
                     TextFormField(
+                      style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         prefixIcon: Icon(
                           Icons.add,
@@ -229,6 +234,25 @@ class _AddExpense_ScreenState extends State<AddExpense_Screen> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Center(
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.teal,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5.0),
+                              ),
+                              textStyle: TextStyle(
+                                  color:
+                                      const Color.fromARGB(255, 255, 255, 255)),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              "Add Expense",
+                              style: TextStyle(color: Colors.white),
+                            )))
                   ],
                 ),
               ),

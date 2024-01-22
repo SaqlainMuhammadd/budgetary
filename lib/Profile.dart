@@ -98,7 +98,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         fontSize: 14),
                   ),
                   Text(
-                    'saqlainqureshi12@gmail.com',
+                    'makdoomsaqlainqureshi@gmail.com',
                     style: GoogleFonts.aBeeZee(
                         color: MythemeClass.black54color,
                         fontWeight: FontWeight.bold,

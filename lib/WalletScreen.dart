@@ -1,4 +1,6 @@
+import 'package:budgetary_your_personal_finance_manager/Addexpense.dart';
 import 'package:budgetary_your_personal_finance_manager/Clipperr.dart';
+import 'package:budgetary_your_personal_finance_manager/Transactiondetail.dart';
 import 'package:budgetary_your_personal_finance_manager/themeclass.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -158,12 +160,15 @@ class _WalletScreenState extends State<WalletScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          'Add',
-                          style: GoogleFonts.aBeeZee(
-                              color: MythemeClass.blackcolor,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 12),
+                        InkWell(
+                          onTap: () => AddExpense_Screen,
+                          child: Text(
+                            'Add',
+                            style: GoogleFonts.aBeeZee(
+                                color: MythemeClass.blackcolor,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12),
+                          ),
                         ),
                         SizedBox(
                           width: width * 0.09,
@@ -206,12 +211,22 @@ class _WalletScreenState extends State<WalletScreen> {
                                 borderRadius: BorderRadius.circular(20),
                                 color: MythemeClass.whitecolor),
                             child: Center(
-                              child: Text(
-                                'Transactions',
-                                style: GoogleFonts.aBeeZee(
-                                    color: MythemeClass.blackcolor,
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 12),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            Transactiondetailscreen_screen(),
+                                      ));
+                                },
+                                child: Text(
+                                  'Transactions',
+                                  style: GoogleFonts.aBeeZee(
+                                      color: MythemeClass.blackcolor,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 12),
+                                ),
                               ),
                             ),
                           ),
@@ -245,8 +260,8 @@ class _WalletScreenState extends State<WalletScreen> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
-                                  image: AssetImage(
-                                      "assets/images/upwork-pngrepo-com.png"))),
+                                  image:
+                                      AssetImage("assets/images/upwork.png"))),
                         ),
                         SizedBox(
                           width: width * 0.02,
@@ -291,7 +306,7 @@ class _WalletScreenState extends State<WalletScreen> {
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
                                   image: AssetImage(
-                                      "assets/images/Onboarding.png"))),
+                                      "assets/images/Facebook.png"))),
                         ),
                         SizedBox(
                           width: width * 0.02,
@@ -299,7 +314,7 @@ class _WalletScreenState extends State<WalletScreen> {
                         Column(
                           children: [
                             Text(
-                              'Transfer',
+                              'Facebook',
                               style: GoogleFonts.aBeeZee(
                                   color: MythemeClass.blackcolor,
                                   fontWeight: FontWeight.bold,
@@ -335,7 +350,8 @@ class _WalletScreenState extends State<WalletScreen> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
-                                  image: AssetImage("assets/images/yt.jpg"))),
+                                  image:
+                                      AssetImage("assets/images/youtube.png"))),
                         ),
                         SizedBox(
                           width: width * 0.02,
@@ -379,7 +395,8 @@ class _WalletScreenState extends State<WalletScreen> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
-                                  image: AssetImage("assets/images/ppal.jpg"))),
+                                  image:
+                                      AssetImage("assets/images/fiverr.png"))),
                         ),
                         SizedBox(
                           width: width * 0.02,
@@ -387,7 +404,7 @@ class _WalletScreenState extends State<WalletScreen> {
                         Column(
                           children: [
                             Text(
-                              'Paypal',
+                              'Fiverr',
                               style: GoogleFonts.aBeeZee(
                                   color: MythemeClass.blackcolor,
                                   fontWeight: FontWeight.bold,

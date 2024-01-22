@@ -1,7 +1,8 @@
+import 'package:budgetary_your_personal_finance_manager/Addexpense.dart';
 import 'package:budgetary_your_personal_finance_manager/Profile.dart';
-import 'package:budgetary_your_personal_finance_manager/Transactiondetail.dart';
 import 'package:budgetary_your_personal_finance_manager/WalletScreen.dart';
 import 'package:budgetary_your_personal_finance_manager/homepage.dart';
+import 'package:budgetary_your_personal_finance_manager/statistics.dart';
 import 'package:budgetary_your_personal_finance_manager/themeclass.dart';
 import 'package:flutter/material.dart';
 
@@ -17,8 +18,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _pages = [
     const homepage(),
-    const Transactiondetailscreen_screen(),
     const WalletScreen(),
+    const AddExpense_Screen(),
+    const statisticsScreen(),
     const ProfileScreen(),
   ];
   @override
@@ -34,11 +36,37 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: 'Trade'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.card_travel_sharp), label: 'Wallet'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+              icon: Icon(
+                Icons.home,
+                color: Colors.teal,
+              ),
+              label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.wallet,
+                color: Colors.teal,
+              ),
+              label: 'Wallet'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_circle,
+                color: Colors.teal,
+              ),
+              label: 'Add'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.trending_up_outlined,
+                size: 24.0,
+                color: Colors.teal,
+              ),
+              label: 'Statistics'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                color: Colors.teal,
+              ),
+              label: 'Profile'),
         ],
         unselectedItemColor: MythemeClass.black54color,
         selectedItemColor: Colors.teal,

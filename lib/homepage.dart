@@ -17,21 +17,21 @@ class _homepageState extends State<homepage> {
       body: Stack(
         children: [
           Container(
-            // child: Column(
-            //   children: [
-            //     Row(
-            //       children: [
-            //         SizedBox(
-            //           height: 250,
-            //         ),
-            //         Text("Transaction History"),
-            //       ],
-            //     ),
-            //     Row(
-            //       children: [Icon(Icons.add)],
-            //     )
-            //   ],
-            // ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      height: 250,
+                    ),
+                    Text("Transaction History"),
+                  ],
+                ),
+                Row(
+                  children: [Icon(Icons.add)],
+                )
+              ],
+            ),
             height: height,
             width: width,
             decoration: BoxDecoration(color: Colors.blue[50]),
