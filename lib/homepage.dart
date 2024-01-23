@@ -17,20 +17,33 @@ class _homepageState extends State<homepage> {
       body: Stack(
         children: [
           Container(
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    SizedBox(
-                      height: 250,
-                    ),
-                    Text("Transaction History"),
-                  ],
-                ),
-                Row(
-                  children: [Icon(Icons.add)],
-                )
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(height: height * 1.1),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Transaction History",
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(color: Colors.black, fontSize: 15),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * 0.15,
+                      ),
+                      Text('See all'),
+                    ],
+                  ),
+                  SizedBox(
+                    width: width * 0.02,
+                  )
+                ],
+              ),
             ),
             height: height,
             width: width,
@@ -44,7 +57,7 @@ class _homepageState extends State<homepage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: height * 0.05,
+                    height: height * 0.03,
                   ),
                   Text(
                     'Good Afternoon',
@@ -103,7 +116,7 @@ class _homepageState extends State<homepage> {
               children: [
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 25),
+                    padding: const EdgeInsets.only(left: 30, top: 12),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,7 +137,7 @@ class _homepageState extends State<homepage> {
                               color: Colors.white,
                             ),
                             SizedBox(
-                              width: 145,
+                              width: width * 0.2,
                             ),
                             Icon(
                               Icons.more_horiz,
@@ -140,7 +153,7 @@ class _homepageState extends State<homepage> {
                               .copyWith(color: Colors.white, fontSize: 25),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: height * 0.01,
                         ),
                         Row(
                           children: [
@@ -149,7 +162,7 @@ class _homepageState extends State<homepage> {
                               color: Colors.white,
                             ),
                             SizedBox(
-                              width: 3,
+                              width: width * 0.01,
                             ),
                             Text(
                               "Income",
@@ -158,14 +171,14 @@ class _homepageState extends State<homepage> {
                                   fontWeight: FontWeight.w600),
                             ),
                             SizedBox(
-                              width: 105,
+                              width: width * 0.1,
                             ),
                             Icon(
                               Icons.arrow_circle_up_rounded,
                               color: Colors.white,
                             ),
                             SizedBox(
-                              width: 3,
+                              width: width * 0.01,
                             ),
                             Text(
                               "Expense",
@@ -181,17 +194,17 @@ class _homepageState extends State<homepage> {
                               'Rs 1,840.00',
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w600),
                             ),
                             SizedBox(
-                              width: 80,
+                              width: width * 0.1,
                             ),
                             Text(
                               'Rs 1,840.00',
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w600),
                             ),
                           ],
@@ -217,6 +230,9 @@ class _homepageState extends State<homepage> {
           ),
         ],
       ),
+      resizeToAvoidBottomInset: false,
+      drawerEnableOpenDragGesture: false,
+      endDrawerEnableOpenDragGesture: false,
     );
   }
 }

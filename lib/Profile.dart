@@ -74,10 +74,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(32),
                   image: const DecorationImage(
-                      image:
-                          AssetImage("assets/images/IMG_20231117_144452.jpg"),
+                      image: AssetImage("assets/images/prfile.jpg"),
                       fit: BoxFit.cover),
-                  color: Colors.amber),
+                  color: Color.fromARGB(255, 0, 195, 255)),
             ),
           ),
           Positioned(
