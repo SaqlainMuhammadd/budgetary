@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "778246375321",
+    "project_id": "budgets-37fb6",
+    "storage_bucket": "budgets-37fb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778246375321:android:292b849517f03bd1feb508",
+        "android_client_info": {
+          "package_name": "com.sevenskiessolutions.snab_budget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778246375321-kp9oo2f2uh95p6l1888og86ka76t9jre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC-bMYbC0K66ukSWpVZcfCJd2kPF-GWuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778246375321-kp9oo2f2uh95p6l1888og86ka76t9jre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
